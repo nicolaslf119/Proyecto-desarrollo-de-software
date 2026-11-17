@@ -1,0 +1,32 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "ClinicaApplication",
+            "request": "launch",
+            "mainClass": "com.example.clinica.ClinicaApplication",
+            "projectName": "clinica",
+            "env": {
+                "DB_USER": "${input:dbUser}",
+                "DB_PASSWORD": "${input:dbPassword}",
+                "DB_HOST": "localhost",
+                "DB_PORT": "5432",
+                "DB_NAME": "clinica"
+            }
+        }
+    ],
+    "inputs": [
+        {
+            "id": "dbUser",
+            "type": "promptString",
+            "description": "Usuario de PostgreSQL"
+        },
+        {
+            "id": "dbPassword",
+            "type": "promptString",
+            "description": "Contraseña de PostgreSQL",
+            "password": true
+        }
+    ]
+}
